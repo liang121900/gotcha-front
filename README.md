@@ -1,2 +1,2 @@
 # gotcha-front
-React App of Gotcha With S3 Static Host
+React App of Gotcha With AWS Amplify

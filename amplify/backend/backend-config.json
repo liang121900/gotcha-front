@@ -1,0 +1,11 @@
+{
+  "auth": {
+    "gotchafront8422f57a": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

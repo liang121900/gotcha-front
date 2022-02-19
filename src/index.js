@@ -11,6 +11,7 @@ Amplify.configure(awsconfig)
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <h2>api path: {process.env.REACT_APP_GOTCHA_API}</h2>
   </React.StrictMode>,
   document.getElementById('root')
 );

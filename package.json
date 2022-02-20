@@ -18,9 +18,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build": "react-scripts build'",
-    "build:dev": "env-cmd -f ./.env.dev npm run-script build",
-    "build:uat": "env-cmd -f ./.env.uat npm run-script build",
-    "build:prod": "env-cmd -f ./.env.prod npm run-script build"
+    "build:dev": "env-cmd -f ./.env.dev react-scripts build",
+    "build:uat": "env-cmd -f ./.env.uat react-scripts build",
+    "build:prod": "env-cmd -f ./.env.prod react-scripts build"
   },
   "eslintConfig": {
     "extends": [

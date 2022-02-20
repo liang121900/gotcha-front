@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - if [ "${USER_BRANCH}" = "dev" ]; then npm run build\:dev; fi
+        - if [ "${USER_BRANCH}" = "uat" ]; then npm run build\:uat; fi
+        - if [ "${USER_BRANCH}" = "prod" ]; then npm run build\:prod; fi
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

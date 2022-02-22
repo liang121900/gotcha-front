@@ -1,26 +1,31 @@
-import logo from './logo.svg';
+import { } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
-import { withAuthenticator } from '@aws-amplify/ui-react'
+import Dashboard from './components/pages/Dashboard/Dashboard';
+import Home from './components/pages/home/Home';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter >
+      <div className="App">
+        <nav>
+            <Link to="/">Home</Link>
+            <Link to="/dashboard">dashboard</Link>
+        </nav>
+        <Routes>
+          <Route exact path='/' element={<Home/>} >
+          </Route>
+
+          <Route exact path='/dashboard' element={<Dashboard/>}>
+          </Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
-export default withAuthenticator(App);
+export default App;

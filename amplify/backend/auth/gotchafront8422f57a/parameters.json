@@ -4,13 +4,8 @@
   "serviceType": "imported",
   "region": "us-east-2",
   "requiredAttributes": [],
-  "passwordPolicyMinLength": 8,
-  "passwordPolicyCharacters": [
-    "Requires Lowercase",
-    "Requires Uppercase",
-    "Requires Numbers",
-    "Requires Symbols"
-  ],
+  "passwordPolicyMinLength": 6,
+  "passwordPolicyCharacters": [],
   "mfaConfiguration": "OFF",
   "mfaTypes": []
 }
